@@ -1,115 +1,221 @@
 
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color:#111;
+}
+img{
+    max-width:100%;
+    display:block;
+}
 .container{
     max-width:1200px;
     width:100%;
     margin:0 auto;
-    padding:0 20px;
+    padding:20px;
 }
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 0;
+    padding:10px 0;
     flex-wrap:wrap;
-    gap:20px;
+    gap:16px;
 }
 .whole{
     display:flex;
-    gap:20px;
+    gap:12px;
+    flex-wrap:wrap;
 }
 .btn{
-    padding: 2px 2px;
-    border-radius: 10px;
-    background-color: gold;
+    padding:10px 16px;
+    border-radius: 999px;
+    background-color: #ffce00;
     min-width: 120px;
-    height: 50px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-
+    gap:8px;
+    font-weight:700;
 }
 .btn img{
-    width:30px;
-    height:30px;
+    width:24px;
+    height:24px;
     object-fit: contain;
 }
 .btn span{
-    font-weight: bold;
-    padding-top: 5px;
+    line-height:1;
 }
-
 .grey{
-    background-color: #ddd;
-     
-
+    background-color: #ececec;
 }
 .location{
     display:flex;
     align-items:center;
     gap:8px;
+    flex-wrap:wrap;
+    font-size:0.95rem;
 }
 .location a{
     color: #1565ff;
     font-weight: 600;
-}
-
-.search-box{
-    display:flex;
-    flex:1;
-    align-items: center;
-     border:2px solid #2874f0;
-    border-radius:12px;
-    padding:10px 15px;
-}
-.search-box input{
-    border:none;
-    outline:none;
+    text-decoration:none;
 }
 .search{
     display: flex;
     justify-content: space-between;
-    gap:40px;
+    align-items:center;
+    gap:20px;
+    padding:12px 0;
+    flex-wrap:wrap;
+}
+.search-box{
+    display:flex;
+    flex:1;
+    align-items: center;
+    border:2px solid #2874f0;
+    border-radius:12px;
+    padding:10px 14px;
+    background:#fff;
+    min-width:220px;
+}
+.search-box i{
+    color:#7a7a7a;
+    margin-right:10px;
+    font-size:18px;
+}
+.search-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:1rem;
 }
 .item{
     display:flex;
-    gap:30px
-
+    gap:20px;
+    flex-wrap:wrap;
 }
 .login{
     display:flex;
     align-items:center;
     gap:8px;
+    font-size:0.95rem;
+    color:#242424;
 }
 .outline{
     border-bottom:1px solid #ddd;
-    margin-top: 10px;
+    border-top:1px solid #ddd;
+    margin-top:10px;
     display:flex;
-    justify-content: space-between;
-    gap: 12px;
-    border-top: 1px solid #ddd;
-    align-items:center ;
-    
-
+    gap:12px;
+    flex-wrap:nowrap;
+    overflow-x:hidden;
+    padding:14px 0;
+    align-items:center;
 }
 .category{
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    width:80px;
-    gap:8px;
+    flex:0 0 auto;
+    min-width:72px;
+    width:auto;
+    gap:5px;
     cursor:pointer;
+    padding:0 6px;
+}
+@media (max-width:680px){
+    .outline{
+        overflow-x:auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 .category img{
-    width:40px;
-    height:40px;
+    width:36px;
+    height:36px;
 }
 .category p{
-    font-size:14px;
+    font-size:13px;
     margin:0;
+    line-height:1.2;
+}
+.card,
+.coupon-wrapper{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:16px;
+}
+.card img,
+.coupon-wrapper img{
+    border-radius:16px;
+    width:100%;
+    object-fit:cover;
 }
 .card{
-    display: flex;
+    width:100%;
+    gap:16px;
+}
+.card img{
+    flex:1 1 280px;
+    min-width:220px;
+}
+.coupon-wrapper{
+    width:100%;
+}
+.coupon-wrapper img{
+    min-height:180px;
+}
+@media (max-width:900px){
+    .container{
+        padding:16px;
+    }
+    .header{
+        justify-content:flex-start;
+    }
+    .search{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .item{
+        justify-content:flex-start;
+    }
+    .outline{
+        gap:12px;
+    }
+}
+@media (max-width:680px){
+    .btn{
+        min-width:100px;
+        padding:10px 14px;
+        height:44px;
+    }
+    .search-box{
+        padding:10px 12px;
+    }
+    .item{
+        gap:14px;
+    }
+    .category{
+        min-width:68px;
+        gap:6px;
+    }
+    .category p{
+        font-size:12px;
+    }
+    .header,
+    .search,
+    .location{
+        width:100%;
+    }
+    .card img{
+        min-width:100%;
+    }
 }
 
