@@ -170,7 +170,7 @@ img{
     width:100%;
 }
 .coupon-wrapper img{
-    min-height:110px;
+    min-height:100px;
 }
 @media (max-width:900px){
     .container{
