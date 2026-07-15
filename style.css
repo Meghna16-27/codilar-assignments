@@ -64,14 +64,14 @@ img{
 .location a{
     color: #1565ff;
     font-weight: 600;
-    text-decoration:none;
+  
 }
 .search{
     display: flex;
     justify-content: space-between;
     align-items:center;
     gap:20px;
-    padding:12px 0;
+    padding:12px;
     flex-wrap:wrap;
 }
 .search-box{
