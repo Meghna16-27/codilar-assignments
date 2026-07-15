@@ -91,7 +91,6 @@ img{
 }
 .search-box input{
     border:none;
-    outline:none;
     width:100%;
     font-size:1rem;
 }
@@ -110,13 +109,10 @@ img{
 .outline{
     border-bottom:1px solid #ddd;
     border-top:1px solid #ddd;
-    margin-top:10px;
     display:flex;
     gap:12px;
-    flex-wrap:nowrap;
-    overflow-x:hidden;
-    padding:14px 0;
     align-items:center;
+
 }
 .category{
     display:flex;
@@ -124,15 +120,12 @@ img{
     align-items:center;
     text-align:center;
     min-width:72px;
-    width:auto;
     gap:5px;
     cursor:pointer;
-    padding:6px;
 }
 @media (max-width:680px){
     .outline{
         overflow-x:auto;
-        -webkit-overflow-scrolling: touch;
     }
 }
 .category img{
@@ -151,12 +144,7 @@ img{
     flex-wrap:wrap;
     margin-top:16px;
 }
-.card img,
-.coupon-wrapper img{
-    border-radius:16px;
-    width:100%;
-    object-fit:cover;
-}
+
 .card{
     width:100%;
     gap:16px;
